@@ -1,0 +1,17 @@
+<article class="post-item">
+  <h2>
+    <%=blog.title%>
+  </h2>
+  <p class="post-item-author">By <%=blog.author.name%>
+  </p>
+  <p>
+    <%=blog.summary%>
+  </p>
+  <div class="post-actions">
+    <form action="/post/<%=blog._id%>/delete" method="POST">
+      <button class="btn btn-alt">Delete Post</button>
+    </form>
+    <a href="/post/<%=blog._id%>/edit">Edit Post</a>
+    <a class="btn" href="/post/<%=blog._id%>">View Post</a>
+  </div>
+</article>

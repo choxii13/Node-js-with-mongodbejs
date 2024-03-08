@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('includes/head', { title: 'All Posts' }) %>
+    <link rel="stylesheet" href="/styles/posts.css">
+</head>
+
+<body>
+  <%- include('includes/header') %>
+    <main id="all-posts">
+      <h1>All Posts</h1>
+      <% if(!blogs || blogs.length===0) {%>
+        <p> No Data</p>
+        <a href="/new-post" class="btn"> Create Post</a>
+        <%} else {%>
+          <% for (const blog of blogs) { %>
+            <%- include('includes/post-item',{blog}) %>
+              <%} %>
+                <% }%>
+    </main>
+</body>
+
+</html>
