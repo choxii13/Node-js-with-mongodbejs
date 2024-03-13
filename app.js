@@ -18,10 +18,6 @@ app.use(function (error, req, res, next) {
   res.status(500).render("500");
 });
 
-app.use(function (req, res) {
-  res.status(404).render("404");
-});
-
 db.connectToDatabase().then(function () {
   app.listen(3000);
 });
